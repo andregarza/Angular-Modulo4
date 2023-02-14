@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     HomeModule,
     LoginModule,
-    DashboardModule
+    DashboardModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

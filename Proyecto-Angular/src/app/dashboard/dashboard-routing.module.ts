@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainpageComponent } from './components/mainpage/mainpage.component';
+
+
 
 const routes: Routes = [];
 
@@ -7,4 +10,6 @@ const routes: Routes = [];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule { 
+ 
+}

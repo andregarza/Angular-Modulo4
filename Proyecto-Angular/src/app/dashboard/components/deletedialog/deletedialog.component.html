@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+    <p>Type the movie Name Id wanna delete</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Movie Id</mat-label>
+      <input matInput [(ngModel)]="movieId">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close] >No Thanks</button>
+    <button mat-button [mat-dialog-close] (click)="deleteid(movieId)" cdkFocusInitial>Delete</button>
+  </div>

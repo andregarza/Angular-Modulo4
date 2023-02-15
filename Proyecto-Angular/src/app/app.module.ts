@@ -8,6 +8,9 @@ import { LoginModule } from './login/login.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthGuard } from './guards/auth.guard';
+import { HttpClientModule} from '@angular/common/http'
+import { MovieService } from './services/movie.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,9 +22,13 @@ import { AuthGuard } from './guards/auth.guard';
     HomeModule,
     LoginModule,
     DashboardModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    BrowserAnimationsModule
+  
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,
+  MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

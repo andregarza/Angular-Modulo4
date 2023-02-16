@@ -9,7 +9,7 @@ import { Movie } from '../model/movie';
 })
 export class MovieService {
 
-  loggedIn: Boolean = true;
+  loggedIn: Boolean = false;
 
   constructor(private httpclient: HttpClient) { }
 

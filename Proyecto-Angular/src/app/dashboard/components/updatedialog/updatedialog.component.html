@@ -6,15 +6,10 @@
     </mat-form-field>
     
     <p></p>
-    <div *ngIf="movieId ; else elseBlockShow">
+    <div *ngIf="movieId">
         <div>
             <button mat-button (click)="getid(movieId)" cdkFocusInitial>Search</button>
-            <p>
-
-            </p>
-            <p>
-                
-            </p>
+            
 
             <tr>
                 <p>Original title: {{movies.name}}</p>
@@ -25,13 +20,13 @@
 
             </tr>
 
-            <div *ngIf="movies.name ; else elseBlockShow">
+            <div *ngIf="movieId">
                 <div>
                     <button mat-button (click)="upt = true" cdkFocusInitial>Update</button>
                     <p> </p>
                     <p> </p>
 
-                    <div *ngIf="upt else elseBlockShow">
+                    <div *ngIf="upt">
 
                         <h3>Update the following fields</h3>
                         <div></div>

@@ -16,6 +16,11 @@ Alcance: Como ya se menciono mi aplicación utiliza todos los métodos Rest del 
 A Continuación veremos un video con el funcionamiento del botón de Modify Entry. (duración 30 seg)
 https://youtu.be/sBlsiDBqxbI
 
+Navegabilidad: El front End cuenta con navegación por rutas, sin embargo trate de que fueran solo las indispensables para tener una integración más sencilla y breve, además que cuenta con un AuthGuard que protege la ruta del Dashboard, ya que en el dashboard es donde se consumen los métodos Rest, se implementó una lógica, de forma que si existía un login, se podría acceder pero de no tenerlo nos regresaría a la página principal, el componente de servicio alberga la lógica de las funciones de login y dentro del autoguard se inyecta para hacer uso de la función, así como también se utiliza en la ventana de diálogo de Login donde también se inyecta el componente de servicios y es en donde se ejecuta la función de login que permite regresar un valor de true en el AutoGuard
+
+
+Modularidad: La distribución del proyecto es pensado para que sea altamente modular, se crearon diferentes módulos, así como un módulo compartido para componentes comunes como el navbar y el footer, asi como módulos que se dividen por funcionalidad, lo que permite un mayor orden dentro del proyecto, cada módulo tiene asignado el nombre de su función, por ejemplo, Home, Login, Dashboard, Shared, etc.
+
 
 
 

@@ -13,6 +13,9 @@ Templates: Para la creación de las templates mi objetivo principal fue que fuer
 
 Alcance: Como ya se menciono mi aplicación utiliza todos los métodos Rest del back end del anterior módulo y correctamente muestra al usuario los cambios, al utilizar botones interactivos que no obstaculizan el uso de los métodos Rest, además quiero resaltar la lógica utilizada detrás de de todas las ventanas de diálogo, ya que fue todo un reto implementarlas de esta forma, quisiera invitar a revisar la parte del módulo de dashboard y todos los componentes de las ventanas de diálogo, sobre todo el de update ya que fue el que más retos presento.
 
+A Continuación veremos un video con el funcionamiento del botón de Modify Entry. (duración 30 seg)
+https://youtu.be/sBlsiDBqxbI
+
 
 
 

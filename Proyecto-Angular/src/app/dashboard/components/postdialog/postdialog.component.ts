@@ -8,17 +8,34 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class PostdialogComponent {
 
+  errorMessage!: string;
+  movie! : [];
+
   constructor(private movieservice: MovieService ){}
 
   movieName!: string;
 
   public postname(moviename: string){
-    this.movieservice.postname(moviename).subscribe(respuesta => {
-      console.log(' success creating entry: ', respuesta);
-    }), (error: any) => {
-      console.log('error : ', error);
-    }
+    this.movieservice.postname(moviename).subscribe(activity => {
+      console.log(activity);
+
+    }), (err: any) => {
+      this.errorMessage = err.message;
+    };
   }
+
+  public getInfo(moviename: string){
+    this.movieservice.getinfo(moviename)
+    .subscribe
+    (
+      data => 
+      {
+        this.movie = data;
+      }
+
+    );
+  }
+
 
 
 

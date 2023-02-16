@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginpageComponent } from './components/loginpage/loginpage.component';
 
 
+
 @NgModule({
   declarations: [
     LoginpageComponent

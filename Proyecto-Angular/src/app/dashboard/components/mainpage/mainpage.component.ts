@@ -4,6 +4,8 @@ import { MovieService } from 'src/app/services/movie.service';
 import { MatDialog } from '@angular/material/dialog';
 import { PostdialogComponent } from '../postdialog/postdialog.component';
 import { DeletedialogComponent } from '../deletedialog/deletedialog.component';
+import { SearchdialogComponent } from '../searchdialog/searchdialog.component';
+import { UpdatedialogComponent } from '../updatedialog/updatedialog.component';
 
 @Component({
   selector: 'app-mainpage',
@@ -17,7 +19,6 @@ export class MainpageComponent {
 
 
   movies!: Movie[] ;
-  index!: [] ;
   movie!: Movie;
   postmovie!: any;
   id!: any;
@@ -34,16 +35,23 @@ export class MainpageComponent {
       width: '350px',
     })
   }
+
+  openDialog3(){
+    this.matDialog.open(SearchdialogComponent,{
+      width: '500px',
+    })
+  }
+
+  openDialog4(){
+    this.matDialog.open(UpdatedialogComponent,{
+      width: '500px',
+    })
+  }
   
 
   ngOnInit() {
 
-    let postmovie: Movie ={
-
-      name: "Test",
-      year: 1997
-
-    }
+  
 
 
     this.movieservice.getmovies()
@@ -56,50 +64,11 @@ export class MainpageComponent {
 
     );
 
-    this.movieservice.getmoviesid(4)
-    .subscribe
-    (
-      data => 
-      {
-        this.movie = data;
-        console.log(data);
-      }
-
-      
-
-    );
 
 
-  }
-
-  public getid(id:any){
-    this.movieservice.getmoviesid(id)
-    .subscribe
-    (
-      data => 
-      {
-        this.movie = data;
-        console.log(data);
-      }
-
-      
-
-    );
-  }
-
-  public post(){
-    this.movieservice.post({"name": "Test",
-    "year": 1997}).subscribe(respuesta => {
-      console.log('Respuesta en caso de que la solicitud retorne un estado success: ', respuesta);
-    }), (error: any) => {
-      console.log('error : ', error);
-    }
   }
 
   
-
-  public selectmovie(movie: any){
-    this.selectedmovie = movie;
-  }
-
 }
+
+  

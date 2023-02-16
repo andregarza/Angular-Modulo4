@@ -15,13 +15,19 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import { PostdialogComponent } from './components/postdialog/postdialog.component';
 import { DeletedialogComponent } from './components/deletedialog/deletedialog.component';
+import { SearchdialogComponent } from './components/searchdialog/searchdialog.component';
+import { UpdatedialogComponent } from './components/updatedialog/updatedialog.component';
+import { LogindialogComponent } from './components/logindialog/logindialog.component';
 
 
 @NgModule({
   declarations: [
     MainpageComponent,
     PostdialogComponent,
-    DeletedialogComponent
+    DeletedialogComponent,
+    SearchdialogComponent,
+    UpdatedialogComponent,
+    LogindialogComponent
   ],
   imports: [
     CommonModule,

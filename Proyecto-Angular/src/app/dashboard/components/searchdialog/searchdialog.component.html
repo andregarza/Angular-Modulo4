@@ -1,0 +1,38 @@
+<div mat-dialog-content>
+    <p>Type the movie Name you wanna search</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Movie Name</mat-label>
+      <input matInput [(ngModel)]="moviename">
+    </mat-form-field>
+    
+    <p></p>
+    <div *ngIf="moviename">
+        <div>
+            <button mat-button (click)="getInfo(moviename)" cdkFocusInitial>Search</button>
+            <p>
+
+            </p>
+            <p>
+                
+            </p>
+
+            <tr *ngFor="let data of movie">
+                <p>{{data}}</p>
+
+            </tr>
+
+            
+
+            
+        </div>
+       
+        
+
+    </div>
+
+    
+  </div>
+  <div mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close] >No Thanks</button>
+    <button mat-button [mat-dialog-close] (click)="postname(moviename)" cdkFocusInitial>Save</button>
+  </div>

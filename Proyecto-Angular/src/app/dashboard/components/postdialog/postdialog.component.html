@@ -8,5 +8,9 @@
   </div>
   <div mat-dialog-actions align="end">
     <button mat-button [mat-dialog-close] >No Thanks</button>
-    <button mat-button [mat-dialog-close] (click)="postname(movieName)" cdkFocusInitial>Save</button>
+    <button mat-button (click)="getInfo(movieName)"  (click)="postname(movieName)" cdkFocusInitial>Save</button>
+    <p *ngIf="movie">
+      Saving {{movie.slice(0,1)}}
+    </p>
+    
   </div>

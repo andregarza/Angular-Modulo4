@@ -1,0 +1,91 @@
+<div mat-dialog-content>
+    <p>Type the movie id you wanna search</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Movie Id</mat-label>
+      <input matInput [(ngModel)]="movieId">
+    </mat-form-field>
+    
+    <p></p>
+    <div *ngIf="movieId ; else elseBlockShow">
+        <div>
+            <button mat-button (click)="getid(movieId)" cdkFocusInitial>Search</button>
+            <p>
+
+            </p>
+            <p>
+                
+            </p>
+
+            <tr>
+                <p>Original title: {{movies.name}}</p>
+                <p>Release Date: {{movies.year}}</p>
+                <p>Overview: {{movies.overview}}</p>
+                <p>Watched at: {{movies.watchedAt}}</p>
+             
+
+            </tr>
+
+            <div *ngIf="movies.name ; else elseBlockShow">
+                <div>
+                    <button mat-button (click)="upt = true" cdkFocusInitial>Update</button>
+                    <p> </p>
+                    <p> </p>
+
+                    <div *ngIf="upt else elseBlockShow">
+
+                        <h3>Update the following fields</h3>
+                        <div></div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Movie Name</mat-label>
+                            <input matInput [(ngModel)]="movies.name">
+                          </mat-form-field>
+                          <p>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Movie Year</mat-label>
+                                <input matInput [(ngModel)]="movies.year">
+                              </mat-form-field>
+
+                          </p>
+                          <p>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Movie Year</mat-label>
+                                <input matInput [(ngModel)]="movies.overview">
+                              </mat-form-field>
+
+                          </p>
+                          <p>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Movie Year</mat-label>
+                                <input matInput [(ngModel)]="movies.watchedAt">
+                              </mat-form-field>
+
+                          </p>
+                         
+
+                    </div>
+                   
+                </div>
+
+
+            </div>
+            
+          
+
+            
+
+            
+        </div>
+       
+        
+
+    </div>
+    <ng-template #elseBlockShow>
+        Insert a valid value
+    </ng-template>
+    
+  </div>
+  <div mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close] >No Thanks</button>
+    <button mat-button [mat-dialog-close] (click)="update(movieId,switch())" cdkFocusInitial>Save</button>
+  </div>
+

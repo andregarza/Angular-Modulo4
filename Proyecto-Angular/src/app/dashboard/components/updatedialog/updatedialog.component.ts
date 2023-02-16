@@ -26,12 +26,14 @@ export class UpdatedialogComponent {
 
   public getid(id:any){
     this.movieservice.getmoviesid(id)
-    .subscribe(activity => {
-      console.log(activity);
+    .subscribe
+    (
+      data => 
+      {
+        this.movies = data;
+      }
 
-    }), (err: any) => {
-      window.alert('error al obtener actividad');
-    };
+    );
   }
 
   
